@@ -1,0 +1,39 @@
+name: pnn_hzz
+channels:
+  - pytorch
+    #- nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+
+  # Core scientific stack
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - scikit-learn
+
+  # HEP tools
+  - uproot
+  - awkward
+
+  # ML
+  - pytorch
+  - torchvision
+  - torchaudio
+    ###- pytorch-cuda=12.1   # change if your system uses different CUDA
+
+  # SHAP
+  - shap
+
+  # Utilities
+  - tqdm
+
+  # Optional but useful
+  - jupyter
+  - ipython
+
+  # Pip fallback (if needed)
+  - pip
+  - pip:
+      - seaborn

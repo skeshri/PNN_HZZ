@@ -1,0 +1,28 @@
+universe        = vanilla
+executable      = training/run_train.sh
+
+# Run directory
+initialdir      = /afs/cern.ch/work/s/skeshri/Analysis/Sumit/PNN_HZZ
+
+# Logs
+output          = logs/train_$(ClusterId).out
+error           = logs/train_$(ClusterId).err
+log             = logs/train_$(ClusterId).log
+
+# Resources
+request_cpus    = 4
+request_memory  = 8 GB
+request_disk    = 5 GB
+
+# Runtime limits (optional but recommended)
+#+MaxRuntime     = 86400   # 24 hours
++JobFlavour             = "nextweek"
+# Environment
+getenv          = True
+
+# Job control
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+queue
+
